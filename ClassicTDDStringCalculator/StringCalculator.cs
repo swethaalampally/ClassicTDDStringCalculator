@@ -7,15 +7,10 @@ namespace ClassicTDDStringCalculator
     {
         public int Add(string inputString)
         {
-            char[] seperators = {',', '\n'};
+            char[] seperators = { ',', '\n' };
 
             if (inputString == "")
                 return 0;
-
-            if (!inputString.Contains(','))
-            {
-                return Convert.ToInt32(inputString);
-            }
 
             var numbers = inputString.Split(seperators);
 
