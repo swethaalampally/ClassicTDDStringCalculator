@@ -9,6 +9,7 @@ namespace ClassicTDDStringCalculator
         [InlineData("",0)]
         [InlineData("1",1)]
         [InlineData("1,2",3)]
+        [InlineData("4,5", 9)]
         public void shouldreturnaddition(string numbers,int expectedValue)
         {
             StringCalculator obj = new StringCalculator();
