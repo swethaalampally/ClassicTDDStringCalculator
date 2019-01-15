@@ -6,9 +6,16 @@ namespace ClassicTDDStringCalculator
     public class UnitTest1
     {
         [Fact]
-        public void Test1()
+        public void shouldreturnaddition()
         {
+            StringCalculator obj = new StringCalculator();
+            int sum = obj.add("");
+
+            Assert.Equal(0, sum);
 
         }
     }
+
+
+
 }
