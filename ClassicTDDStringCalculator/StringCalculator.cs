@@ -7,13 +7,7 @@ namespace ClassicTDDStringCalculator
     {
         public int Add(string inputString)
         {
-            if (inputString == @"1\n2,3")
-                return 6;
-
-            if (inputString == @"1\n2,3\n1")
-                return 7;
-            if (inputString == @"1\n2,3\n1,1,1")
-                return 9;
+            char[] seperators = {',', '\n'};
 
             if (inputString == "")
                 return 0;
@@ -23,7 +17,7 @@ namespace ClassicTDDStringCalculator
                 return Convert.ToInt32(inputString);
             }
 
-            var numbers = inputString.Split(',');
+            var numbers = inputString.Split(seperators);
 
             return numbers.Sum(Convert.ToInt32);
         }
