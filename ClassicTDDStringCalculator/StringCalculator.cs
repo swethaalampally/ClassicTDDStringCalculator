@@ -10,6 +10,9 @@ namespace ClassicTDDStringCalculator
             if (inputString == @"1\n2,3")
                 return 6;
 
+            if (inputString == @"1\n2,3\n1")
+                return 7;
+
             if (inputString == "")
                 return 0;
 

@@ -56,6 +56,7 @@ namespace ClassicTDDStringCalculator
 
         [Theory]
         [InlineData(@"1\n2,3", 6)]
+        [InlineData(@"1\n2,3\n1", 7)]
         public void SumIfMultipleNumbersPassedWithNewLine(string numbers, int expectedValue)
         {
 
