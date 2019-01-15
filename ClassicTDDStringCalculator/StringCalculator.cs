@@ -11,7 +11,7 @@ namespace ClassicTDDStringCalculator
         public int add(string number)
         {
 
-            return 0;
+            return number==""?0:Convert.ToInt32(number);
         }
     }
 }

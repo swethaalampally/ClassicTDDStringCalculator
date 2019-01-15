@@ -7,6 +7,7 @@ namespace ClassicTDDStringCalculator
     {
         [Theory]
         [InlineData("",0)]
+        [InlineData("1",1)]
         public void shouldreturnaddition(string numbers,int expectedValue)
         {
             StringCalculator obj = new StringCalculator();
