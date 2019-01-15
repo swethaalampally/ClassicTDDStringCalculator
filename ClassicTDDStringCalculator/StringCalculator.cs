@@ -1,28 +1,23 @@
 ﻿using System;
+using System.Linq;
 
 namespace ClassicTDDStringCalculator
 {
     internal class StringCalculator
     {
-        public int add(string number)
+        public int Add(string inputString)
         {
-            if (number == "")
+            if (inputString == "")
                 return 0;
 
-            if (!number.Contains(','))
+            if (!inputString.Contains(','))
             {
-                return Convert.ToInt32(number);
+                return Convert.ToInt32(inputString);
             }
 
-            string[] numbers = number.Split(',');
-            int sum=0;
+            var numbers = inputString.Split(',');
 
-            foreach (string i in numbers)
-            {
-                sum += Convert.ToInt32(i);
-            }
-
-            return sum;
+            return numbers.Sum(Convert.ToInt32);
         }
     }
 }

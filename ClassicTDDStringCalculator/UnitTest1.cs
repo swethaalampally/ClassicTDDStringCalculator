@@ -15,7 +15,7 @@ namespace ClassicTDDStringCalculator
         [InlineData("",0)]
         public void ReturnZeroIfEmptyStringPassed(string numbers,int expectedValue)
         {
-            int sum = _stringCalculator.add(numbers);
+            int sum = _stringCalculator.Add(numbers);
 
             Assert.Equal(expectedValue, sum);
         }
@@ -26,7 +26,7 @@ namespace ClassicTDDStringCalculator
         [InlineData("3", 3)]
         public void ReturnNumberIfNumberStringPassed(string numbers, int expectedValue)
         {
-            int sum = _stringCalculator.add(numbers);
+            int sum = _stringCalculator.Add(numbers);
 
             Assert.Equal(expectedValue, sum);
         }
@@ -37,7 +37,7 @@ namespace ClassicTDDStringCalculator
         [InlineData("5,6", 11)]
         public void SumIfTwoNumbersPassed(string numbers, int expectedValue)
         {
-            int sum = _stringCalculator.add(numbers);
+            int sum = _stringCalculator.Add(numbers);
 
             Assert.Equal(expectedValue, sum);
         }
@@ -48,7 +48,7 @@ namespace ClassicTDDStringCalculator
         [InlineData("1,1,1,1,2", 6)]
         public void SumIfMultipleNumbersPassed(string numbers, int expectedValue)
         {
-            int sum = _stringCalculator.add(numbers);
+            int sum = _stringCalculator.Add(numbers);
 
             Assert.Equal(expectedValue, sum);
         }
