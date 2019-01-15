@@ -18,13 +18,14 @@ namespace ClassicTDDStringCalculator
             {
                 return Convert.ToInt32(number);
             }
+            else
+            {
+                string firstNumber = number.Split(',')[0];
+                string secondNumber = number.Split(',')[1];
 
-            if (number == "1,2")
-                return 3;
-            if (number == "5,6")
-                return 11;
+                return Convert.ToInt32(firstNumber) + Convert.ToInt32(secondNumber);
+            }
 
-            return 9;
         }
     }
 }
