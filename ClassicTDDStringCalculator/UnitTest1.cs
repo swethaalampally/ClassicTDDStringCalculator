@@ -8,6 +8,7 @@ namespace ClassicTDDStringCalculator
         [Theory]
         [InlineData("",0)]
         [InlineData("1",1)]
+        [InlineData("2", 2)]
         [InlineData("1,2",3)]
         [InlineData("4,5", 9)]
         [InlineData("5,6",11)]
