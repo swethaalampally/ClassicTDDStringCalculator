@@ -35,6 +35,15 @@ namespace ClassicTDDStringCalculator
         [InlineData("1,2", 3)]
         [InlineData("4,5", 9)]
         [InlineData("5,6", 11)]
+        public void SumIfTwoNumbersPassed(string numbers, int expectedValue)
+        {
+            int sum = _stringCalculator.add(numbers);
+
+            Assert.Equal(expectedValue, sum);
+        }
+
+        [Theory]
+        [InlineData("1,2,3,4,5", 15)]
         public void SumIfMultipleNumbersPassed(string numbers, int expectedValue)
         {
             int sum = _stringCalculator.add(numbers);
@@ -42,9 +51,6 @@ namespace ClassicTDDStringCalculator
             Assert.Equal(expectedValue, sum);
         }
 
-
     }
-
-
 
 }
