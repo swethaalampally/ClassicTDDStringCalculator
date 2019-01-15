@@ -53,6 +53,17 @@ namespace ClassicTDDStringCalculator
             Assert.Equal(expectedValue, sum);
         }
 
+
+        [Theory]
+        [InlineData(@"1\n2,3", 6)]
+        public void SumIfMultipleNumbersPassedWithNewLine(string numbers, int expectedValue)
+        {
+
+            int sum = _stringCalculator.Add(numbers);
+
+            Assert.Equal(expectedValue, sum);
+        }
+
     }
 
 }
