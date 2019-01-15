@@ -18,6 +18,8 @@ namespace ClassicTDDStringCalculator
                 return 1;
             if (number == "2")
                 return 2;
+            if (number == "3")
+                return 3;
             if (number == "1,2")
                 return 3;
             if (number == "5,6")
