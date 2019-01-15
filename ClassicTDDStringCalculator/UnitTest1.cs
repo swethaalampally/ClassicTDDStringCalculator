@@ -45,6 +45,7 @@ namespace ClassicTDDStringCalculator
         [Theory]
         [InlineData("1,2,3,4,5", 15)]
         [InlineData("1,1,1,1,1", 5)]
+        [InlineData("1,1,1,1,2", 6)]
         public void SumIfMultipleNumbersPassed(string numbers, int expectedValue)
         {
             int sum = _stringCalculator.add(numbers);
