@@ -1,14 +1,9 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestPlatform.ObjectModel.Utilities;
 
 namespace ClassicTDDStringCalculator
 {
     internal class StringCalculator
     {
-        public StringCalculator()
-        {
-        }
-
         public int add(string number)
         {
             if (number == "")
@@ -18,13 +13,11 @@ namespace ClassicTDDStringCalculator
             {
                 return Convert.ToInt32(number);
             }
-            else
-            {
-                string firstNumber = number.Split(',')[0];
-                string secondNumber = number.Split(',')[1];
 
-                return Convert.ToInt32(firstNumber) + Convert.ToInt32(secondNumber);
-            }
+            string firstNumber = number.Split(',')[0];
+            string secondNumber = number.Split(',')[1];
+
+            return Convert.ToInt32(firstNumber) + Convert.ToInt32(secondNumber);
 
         }
     }

@@ -1,25 +1,48 @@
-using System;
 using Xunit;
 
 namespace ClassicTDDStringCalculator
 {
-    public class UnitTest1
+    public class StringCalculatorShould
     {
+        private StringCalculator _stringCalculator;
+
+        public StringCalculatorShould()
+        {
+            _stringCalculator = new StringCalculator();
+        }
+
         [Theory]
         [InlineData("",0)]
-        [InlineData("1",1)]
+        public void ReturnZeroIfEmptyStringPassed(string numbers,int expectedValue)
+        {
+            int sum = _stringCalculator.add(numbers);
+
+            Assert.Equal(expectedValue, sum);
+        }
+
+        [Theory]
+        [InlineData("1", 1)]
         [InlineData("2", 2)]
         [InlineData("3", 3)]
-        [InlineData("1,2",3)]
-        [InlineData("4,5", 9)]
-        [InlineData("5,6",11)]
-        public void shouldreturnaddition(string numbers,int expectedValue)
+        public void ReturnNumberIfNumberStringPassed(string numbers, int expectedValue)
         {
-            StringCalculator obj = new StringCalculator();
-            int sum = obj.add(numbers);
-            Assert.Equal(expectedValue, sum);
+            int sum = _stringCalculator.add(numbers);
 
+            Assert.Equal(expectedValue, sum);
         }
+
+        [Theory]
+        [InlineData("1,2", 3)]
+        [InlineData("4,5", 9)]
+        [InlineData("5,6", 11)]
+        public void SumIfMultipleNumbersPassed(string numbers, int expectedValue)
+        {
+            int sum = _stringCalculator.add(numbers);
+
+            Assert.Equal(expectedValue, sum);
+        }
+
+
     }
 
 
